@@ -4,14 +4,91 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Won't Play Nice &mdash; Arty Little Stickers</title>
+	<link rel="stylesheet" href="./build/css/app.css">
 </head>
 <body>
 	
 	<header>
 		
-		<img src="" alt="">
+		<img src="./assets/img/logo.png" alt="Won't Play Nice">
 
 	</header>
+
+	<div class="checkout flex">
+
+		<p class="checkout--contact">
+			<a href="mailto:wontplaynice@gmail.com">Chat It Out</a>
+		</p>
+		
+		<p class="checkout--payment-info">
+			Pay via Venmo @wontplaynice
+		</p>
+
+		<div class="checkout--cart">
+			
+			<ul class="checkout--cart__selected">
+
+				<li class="checkout--cart__sticker" data-stickerid="witchhand">Witch Hand x<span class="checkout--cart__sticker_qty">1</span> <span class="checkout--cart__sticker_remove">&times;</span></li>
+
+			</ul>
+
+		</div>
+
+	</div>
+
+	<div class="filters">
+		
+		<select class="filter--material">
+			<option value="">All</option>
+		</select>
+
+		<select class="filter--size">
+			<option value="">All</option>
+		</select>
+
+		<select class="filter--artist">
+			<option value="">All</option>
+		</select>
+
+	</div>
+
+	<div class="stickers grid gap-4 grid-cols-3">
+
+		<div class="sticker" data-stickerid="" data-stickername="">
+
+			<p class="sticker--price">
+				
+				<span class="sticker--price__number">$3</span>
+
+			</p>
+			
+			<div class="sticker--image"></div>
+
+			<p class="sticker--title">
+				<span>Sticker Name</span>
+			</p>
+
+			<ul class="sticker--meta">
+
+				<li class="sticker--meta__size"></li>
+				<li class="sticker--meta__material"></li>
+
+			</ul>
+
+			<div class="sticker--actions">
+				
+				<button class="sticker--actions__add-to-cart">Add To Cart</button>
+				<button class="sticker--actions__buy-now">Buy Now</button>
+
+			</div>
+
+
+		</div>
+		
+	</div>
+
+	<script src="https://code.jquery.com/jquery-3.7.1.slim.min.js" integrity="sha256-kmHvs0B+OpCW5GVHUNjv9rOmY0IvSIRcf7zGUDTDQM8=" crossorigin="anonymous"></script>
+	<script src="./build/js/app.js"></script>
 
 </body>
 </html>
