@@ -1,5 +1,6 @@
-const mix = require('laravel-mix');
-const local = require('./assets/js/utils/local-config');
+const mix     = require('laravel-mix');
+const local   = require('./assets/js/utils/local-config');
+const homedir = require('os').homedir();
 require('laravel-mix-versionhash');
 require('laravel-mix-tailwind');
 
@@ -13,14 +14,25 @@ mix.webpackConfig({
 
 if (local.proxy) {
     mix.browserSync({
-        proxy: local.proxy,
+
+        proxy: {
+            target: 'https://wontplaynice.test'
+        },
         injectChanges: true,
-        open: false,
-        files: [
-            'build/**/*.{css,js}',
-            'templates/**/*.php',
-            '*.html',
-        ]
+        host: 'wontplaynice.test',
+        open: 'external',
+        https: {
+        key: homedir + '/.config/valet/Certificates/wontplaynice.test.key',
+            cert: homedir + '/.config/valet/Certificates/wontplaynice.test.crt',
+        },
+        files : [
+            '**/*.php',
+            '**/*.html',
+            'build/**/*.css',
+            'build/**/*.js'
+        ],
+        notify: false
+
     });
 }
 

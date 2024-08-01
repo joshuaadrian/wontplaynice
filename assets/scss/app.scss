@@ -6,3 +6,85 @@
 @import "partials/components";
 @import "~tailwindcss/utilities";
 @import "partials/utilities";
+
+body {
+	font-family: "Bebas Neue", sans-serif;
+	background: #111;
+}
+
+header {
+
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: center;
+	padding:30px;
+	background: white;
+
+	img {
+
+		width:200px;
+		height:auto;
+		display: block;
+
+	}
+
+}
+
+.checkout {
+
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: center;
+	grid-gap:30px;
+	padding:30px;
+	border-bottom:1px solid #ccc;
+	background: white;
+
+	&--cart {
+
+		&__sticker {
+
+			font-size: 16px;
+
+			&_qty {
+				margin:0 10px;
+				color:green;
+
+				&:before {
+					content:'qty x';
+				}
+			}
+
+			&_remove {
+
+				color:white;
+				border-radius: 100%;
+				background: red;
+				height:12px;
+				width:12px;
+				text-align: center;
+				line-height:12px;
+				display: inline-block;
+
+
+			}
+
+		}
+
+	}
+
+}
+
+.stickers {
+
+	padding:30px;
+	display: grid;
+	grid-gap: 30px;
+	grid-template-columns: repeat(3, 1fr);
+	max-width: 1400px;
+
+}
+
+.sticker {
+	background: white;
+}
